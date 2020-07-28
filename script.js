@@ -116,6 +116,17 @@ function generatePassword() {
     criteria = specials;
     console.log(criteria)
   }
+  // delcare empty array to later store the password
+  var password = [];
+  
+  // random selection from our criteria array based on how many characters user selects 
+  for(var i = 0; i < length; i ++) {
+    var selction = criteria[Math.floor(Math.random() * criteria.length)]
+    password.push(selction);
+    
+  }
+  return password.join("");
+  console.log(password)
 
 
   
