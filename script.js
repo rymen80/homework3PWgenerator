@@ -26,16 +26,16 @@ function generatePassword() {
   // checking for valid inputs
   if (!pwLength) {
     criteria = alert("please select a valid password length");
-    location.reload();
+    
   }
   else if (pwLength < 8 || pwLength > 128) {
     pwLength = parseInt(prompt("Please choose betwen 8-128"));
   }
   else {
-    numberConfirm = confirm("Would you like your password to include numbers?");
-    upperConfirm = confirm("Would you like your password to include UPPERcase varters?");
-    lowerConfirm = confirm("Would you like your password to include lowercase numbers?");
-    characterConfirm = confirm("Would you like your password to include special characters?\n for example: !,@,#,$,%,^,&,*,");
+   var numberConfirm = confirm("Would you like your password to include numbers?");
+   var upperConfirm = confirm("Would you like your password to include UPPERcase varters?");
+   var lowerConfirm = confirm("Would you like your password to include lowercase numbers?");
+   var characterConfirm = confirm("Would you like your password to include special characters?\n for example: !,@,#,$,%,^,&,*,");
   }
 
   // checking for valid selctions
@@ -44,21 +44,21 @@ function generatePassword() {
   }
   // checking for what values the user wants in their password
   if (numberConfirm) {
-    criteria.concat(nums);
-    //console.log(criteria)
+    criteria = criteria.concat(nums);
+    console.log(criteria)
   }
 
   if (upperConfirm) {
-    criteria = nums.concat(upperAplha);
-    //console.log(criteria)
+    criteria = criteria.concat(upperAplha);
+    console.log(criteria)
   }
   if (lowerConfirm) {
-    criteria = nums.concat(lowerAlpha);
-    //console.log(criteria)
+    criteria = criteria.concat(lowerAlpha);
+    console.log(criteria)
   }
   if (characterConfirm) {
-    criteria = nums.concat(specials);
-    //console.log(criteria)
+    criteria = criteria.concat(specials);
+    console.log(criteria)
   }
   console.log(criteria)
   // delcare empty array password
